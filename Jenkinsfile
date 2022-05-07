@@ -15,7 +15,7 @@ node('Docker01') {
     }
     stage('Validate') {
             echo 'Validating'
-	    sh '''pwd &&  ls -lh && packer validate .'''
+	    sh '''cd packerpipeline && pwd &&  ls -lh && packer validate .'''
     }
 	stage('Build') {
             echo 'Building'
