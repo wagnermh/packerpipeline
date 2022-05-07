@@ -11,11 +11,11 @@ node('Docker01') {
     }
     stage('Format') {
             echo 'Formating'
-	    sh '''pwd && packer fmt .'''
+	    sh '''pwd && packer fmt . &&  ls -lh'''
     }
     stage('Validate') {
             echo 'Validating'
-	    sh '''pwd && packer validate .'''
+	    sh '''pwd && packer validate . && ls -lh'''
     }
 	stage('Build') {
             echo 'Building'
