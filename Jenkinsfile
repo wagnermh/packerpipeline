@@ -11,6 +11,7 @@ node('Docker01') {
     }
     stage('Format') {
             echo 'Formating'
+	    sh '''pwd'''
     }
     stage('Validate') {
             echo 'Validating'
