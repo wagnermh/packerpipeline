@@ -2,7 +2,7 @@ node('Docker01') {
     stage('Checkout') {
             echo 'Checkout'
             sh '''echo Checkout steps'''
-	    sh '''git clone https://github.com/wagnermh/packer.git'''
+	    sh '''git clone https://github.com/wagnermh/packerpipeline.git'''
     }
     stage('Initial') {
             echo 'Initializing'
