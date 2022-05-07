@@ -1,5 +1,5 @@
 pipeline {
-    agent Docker01
+    label Docker01
 
     stages {
         stage('Checkout') {
