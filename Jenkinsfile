@@ -19,6 +19,6 @@ node('Docker01') {
     }
 	stage('Build') {
             echo 'Building'
-            sh '''pwd &&  ls -lh'''
+            sh '''cd packerpipeline && pwd &&  ls -lh && packer build docker-alpine.pkr.hcl'''
     }
 }
