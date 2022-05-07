@@ -19,5 +19,6 @@ node('Docker01') {
     }
 	stage('Build') {
             echo 'Building'
+            sh '''pwd &&  ls -lh'''
     }
 }
