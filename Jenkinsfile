@@ -4,8 +4,6 @@ pipeline {
         stage('Checkout') {
             steps  {
 				echo 'Checkout'
-				git clone https://github.com/wagnermh/packer.git
-				cd  packer
             }
         }
 		stage('Initial') {
