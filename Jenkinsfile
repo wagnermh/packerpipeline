@@ -6,6 +6,8 @@ node('Docker01') {
     }
     stage('Initial') {
             echo 'Initializing'
+	    sh '''cd packerpipeline'''
+	    sh '''packer init .'''
     }
     stage('Format') {
             echo 'Formating'
