@@ -1,33 +1,30 @@
 pipeline {
     agent Docker01
+
     stages {
         stage('Checkout') {
-            steps  {
-				echo 'Checkout'
+            steps {
+                echo 'Checkout'
             }
         }
-		stage('Initial') {
-            steps  {
-				echo 'Initial'
-				packer init .
+        stage('Initial') {
+            steps {
+                echo 'Initializing'
             }
         }
-		stage('Format') {
-            steps  {
-				echo 'Format'
-				packer fmt .
+        stage('Format') {
+            steps {
+                echo 'Formating'
             }
         }
-		stage('Validate') {
-            steps  {
-				echo 'Validate'
-				packer validate .
+        stage('Validate') {
+            steps {
+                echo 'Validating'
             }
         }
-		stage('Build') {
-            steps  {
-				echo 'Build'
-				packer build docker-alpine.pkr.hcl
+	stage('Build') {
+            steps {
+                echo 'Building'
             }
         }
     }
